@@ -101,22 +101,15 @@ def createArray(inputLines):
         inputArray.append(list(line.strip())) 
     return inputArray
 
-def inputTest(puzzlePart):
-    f = open("C:\\Users\\mtupm\\Documents\\VSCode\\Python_Sandbox\\AoC_2021\\Day03\\input_test.txt","r")
-    inputLines = f.readlines()
+def main(path, puzzlePart):
+    file = open(path, "r")
+    inputLines = file.readlines()
     inputArray = createArray(inputLines)
     if puzzlePart == 1 :
         prt1(inputArray)
     elif puzzlePart == 2:
         prt2Driver(inputArray)
 
-def inputMain(puzzlePart):    
-    f = open("C:\\Users\\mtupm\\Documents\\VSCode\\Python_Sandbox\\AoC_2021\\Day03\\input.txt","r")
-    inputLines = f.readlines()
-    inputArray = createArray(inputLines)
-    if puzzlePart == 1 :
-        prt1(inputArray)
-    elif puzzlePart == 2:
-        prt2Driver(inputArray)
-
-inputMain(2)
+f = "C:\\Users\\mtupm\\Documents\\VSCode\\Python_Sandbox\\AoC_2021\\Day03\\input.txt"
+fTest = "C:\\Users\\mtupm\\Documents\\VSCode\\Python_Sandbox\\AoC_2021\\Day03\\input_test.txt"
+main(f, 2)
